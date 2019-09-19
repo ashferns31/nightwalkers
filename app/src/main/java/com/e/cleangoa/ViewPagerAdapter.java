@@ -25,7 +25,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         position = position + 1;
         Bundle bundel = new Bundle();
         demoFragment.setArguments(bundel);
-        Log.v("fragment no:",demoFragment.getpos()+"");
+//        Log.v("fragment no:",demoFragment.getpos()+"");
         return demoFragment;
     }
 

@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
+import android.view.DragEvent;
 import android.view.MenuInflater;
 import android.view.Menu;
+import android.view.MotionEvent;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -27,9 +29,13 @@ private TabLayout tabLayout;
         viewPager=findViewById(R.id.pager);
         adapter=new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+//        viewPager.setOnTouchListener(get);
         tabLayout=findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
+    }
+    public void setAdapter()
+    {
+        switch ((viewPager.getCurrentItem()))
     }
 
 

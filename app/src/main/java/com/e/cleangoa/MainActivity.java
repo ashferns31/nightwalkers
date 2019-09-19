@@ -32,6 +32,7 @@ private TabLayout tabLayout;
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflator=getMenuInflater();

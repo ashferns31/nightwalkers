@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DemoFragment">
+    tools:context=".DemoFragment"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
 
 
+<!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="148dp"-->
+<!--        android:layout_height="112dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:backgroundTint="@color/colorPrimary"-->
+<!--        android:clickable="true"-->
+<!--        android:saveEnabled="true"-->
+<!--        android:text="inspirthon" />-->
 
-
-    <TextView
-        android:id="@+id/txt_display"
-        android:layout_width="370dp"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="inspirthon"
-        android:textSize="30sp"
-        android:textStyle="bold" />
 
 </LinearLayout>

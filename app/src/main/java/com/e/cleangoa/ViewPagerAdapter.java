@@ -3,6 +3,8 @@ package com.e.cleangoa;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -18,10 +20,12 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     ViewPager vg;
     @Override
     public Fragment getItem(int position) {
-        DemoFragment demoFragment = new DemoFragment();
+
+        DemoFragment demoFragment = new DemoFragment(position);
         position = position + 1;
         Bundle bundel = new Bundle();
         demoFragment.setArguments(bundel);
+        Log.v("fragment no:",demoFragment.getpos()+"");
         return demoFragment;
     }
 
@@ -45,8 +49,5 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         }
 
     }
-    public int calpos(){
-        int current=vg.getCurrentItem();
-         return current;
-    }
+
 }

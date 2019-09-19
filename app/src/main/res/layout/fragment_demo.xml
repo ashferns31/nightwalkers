@@ -10,15 +10,14 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-<!--    <Button-->
-<!--        android:id="@+id/button"-->
-<!--        android:layout_width="148dp"-->
-<!--        android:layout_height="112dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:backgroundTint="@color/colorPrimary"-->
-<!--        android:clickable="true"-->
-<!--        android:saveEnabled="true"-->
-<!--        android:text="inspirthon" />-->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="148dp"
+        android:layout_height="112dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorPrimary"
+        android:clickable="true"
+        android:text="inspirthon" />
 
 
 </LinearLayout>

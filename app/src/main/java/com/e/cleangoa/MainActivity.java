@@ -14,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
@@ -21,39 +22,43 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity {
 private Toolbar toolbar;
 private ViewPager viewPager;
-private ViewPagerAdapter adapter;
-private TabLayout tabLayout;
+//private ViewPagerAdapter adapter;
+    private TabLayout tabLayout;
 private MenuItem item;
+public Button _btnevent,_btnsegre,_btnkyw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        _btnevent=(Button)findViewById(R.id.event);
+        _btnkyw=(Button)findViewById(R.id.kyw);
+
+
+        _btnevent.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick (View view){
+                startActivity(new Intent(MainActivity.this, events.class));
+            }
+
+        });
+
+        _btnkyw.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick (View view){
+                startActivity(new Intent(MainActivity.this, awareness.class));
+            }
+
+        });
 
         toolbar=findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
 
-        viewPager=findViewById(R.id.pager);
-        adapter=new ViewPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(adapter);
-//        viewPager.setOnTouchListener(get);
-        tabLayout=findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+
     }
-//    public void adapter()
-//    {
-//        switch (viewPager.getCurrentItem())
-//        {
-//            case 1:
-//            { Button button;
-//                button=(Button)findViewById(R.id.button);
-////                button.setOnClickListener(new);
-//
-//                break;
-//            }
-//            default:
-//
-//        }
-//    }
 
 public boolean onOptionsItemSelected(MenuItem item)
 {
